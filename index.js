@@ -24,10 +24,16 @@ const pokemons = [
     }
 ];
 
+let damageAsc = pokemons.sort((poke1,poke2)=>{
+    return poke1.damage - poke2.damage;
+    // console.log(poke1.damage, poke2.damage)
+});
+console.log(damageAsc);
+
 const onlyNameAndType = pokemons.map((pokemon)=>{
     return { name: pokemon.name, type: pokemon.type }
 });
-console.log(onlyNameAndType);
+// console.log(onlyNameAndType);
 
 // nums.reduce((sum, num) => {
 //     return sum + num;
