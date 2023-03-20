@@ -24,9 +24,10 @@ const pokemons = [
     }
 ];
 
-pokemons.forEach((pokemon)=>{
-    console.log(pokemon.name, pokemon.damage);
-})
+const onlyNameAndType = pokemons.map((pokemon)=>{
+    return { name: pokemon.name, type: pokemon.type }
+});
+console.log(onlyNameAndType);
 
 // nums.reduce((sum, num) => {
 //     return sum + num;
